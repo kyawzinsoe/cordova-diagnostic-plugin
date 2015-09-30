@@ -157,6 +157,19 @@ Diagnostic.prototype.switchToWifiSettings = function() {
 		'switchToWifiSettings',
 		[]);
 };
-
+Diagnostic.prototype.turnOnGPS = function() {
+	return cordova.exec(null,
+		null,
+		'Diagnostic',
+		'turnOnGPS',
+		[]);
+};
+Diagnostic.prototype.turnOffGPS = function() {
+	return cordova.exec(null,
+		null,
+		'Diagnostic',
+		'turnOffGPS',
+		[]);
+};
 module.exports = new Diagnostic();
 
