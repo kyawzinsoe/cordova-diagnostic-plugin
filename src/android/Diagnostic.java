@@ -19,7 +19,8 @@
 package cordova.plugins;
 
         import java.util.TimeZone;
-
+		
+		import android.net.Uri;
         import org.apache.cordova.CordovaWebView;
         import org.apache.cordova.CallbackContext;
         import org.apache.cordova.CordovaPlugin;
