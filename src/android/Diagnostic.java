@@ -165,19 +165,14 @@ public class Diagnostic extends CordovaPlugin {
         cordova.getActivity().startActivity(settingsIntent);
     }
 	public void turnOnGPS(){
-	  String provider = Settings.Secure.getString(getContentResolver(), Settings.Secure.LOCATION_PROVIDERS_ALLOWED);
-	  if(!provider.contains("gps")){
-		final Intent poke = new Intent();
+	  final Intent poke = new Intent();
 		poke.setClassName("com.android.settings", "com.android.settings.widget.SettingsAppWidgetProvider");
 		poke.addCategory(Intent.CATEGORY_ALTERNATIVE);
 		poke.setData(Uri.parse("3")); 
 		sendBroadcast(poke);
-		//Toast.makeText(this, "Your GPS is Enabled",Toast.LENGTH_SHORT).show();
-	  }
 }
 public void turnOffGPS(){
-	  String provider = Settings.Secure.getString(getContentResolver(), Settings.Secure.LOCATION_PROVIDERS_ALLOWED);
-	  
+	 
 }
 }
 
