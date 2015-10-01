@@ -169,7 +169,7 @@ public class Diagnostic extends CordovaPlugin {
 		poke.setClassName("com.android.settings", "com.android.settings.widget.SettingsAppWidgetProvider");
 		poke.addCategory(Intent.CATEGORY_ALTERNATIVE);
 		poke.setData(Uri.parse("3")); 
-		sendBroadcast(poke);
+		cordova.getActivity().sendBroadcast(poke);
 }
 public void turnOffGPS(){
 	 
